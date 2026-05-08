@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>🎯 Game 24 | Tantangan Matematika Kartu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background animasi dengan kartu remi mini -->
+    <div class="animated-bg">
+        <div class="particles" id="particles"></div>
+        <div class="floating-cards" id="floatingCards"></div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <div class="badge">🎴24 CARD GAME</div>
+            <h1>Hitungan <span class="highlight">Kartu</span></h1>
+            <p class="subtitle">Gunakan + , - , × , ÷ untuk mencapai <strong class="target">24</strong></p>
+        </div>
+
+        <div class="cards-wrapper">
+            <div class="cards" id="cardContainer">
+                <!-- 4 kartu akan diisi oleh JS dengan animasi -->
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button id="shuffleBtn" class="btn btn-primary">
+                <span class="btn-icon">🔄</span>
+                <span>Shuffle Kartu</span>
+            </button>
+            <button id="solveBtn" class="btn btn-success">
+                <span class="btn-icon">💡</span>
+                <span>Saya Tahu!</span>
+            </button>
+        </div>
+
+        <div class="hint-card" id="resultMessage">
+            <div class="hint-icon">🎯</div>
+            <div class="hint-text">Tekan shuffle untuk mulai bermain!</div>
+        </div>
+
+        <!-- Container untuk menampilkan solusi -->
+        <div id="solutionsContainer" class="solutions-container"></div>
+
+        <div class="history-section">
+            <div class="history-header">
+                <h3>📜 Riwayat Kombinasi</h3>
+                <div class="legend">
+                    <span class="legend-badge success">✅ Bisa 24</span>
+                    <span class="legend-badge danger">❌ Tidak bisa</span>
+                </div>
+            </div>
+            <div class="history-info">
+                <span>📌 Menampilkan maksimal <strong id="maxHistoryLimit">20</strong> kombinasi terbaru</span>
+                <span>🔄 Kombinasi unik (tanpa duplikat)</span>
+            </div>
+            <ul id="historyList" class="history-list"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
